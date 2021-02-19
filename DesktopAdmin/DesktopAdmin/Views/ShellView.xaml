@@ -40,60 +40,82 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         
+        <!--Student-->
         <Label Grid.Row="1" Grid.Column="1" 
                    Margin="10,0,100,0" FontSize="28" 
                    Grid.ColumnSpan="2" Content="Student:"/>
+        <!--First Name-->
         <TextBlock Grid.Row="2" Grid.Column="1" Text="First Name"/>
-        <TextBox Grid.Row="2" Grid.Column="2" Width="100" Height="20"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Width="100" Height="25"
+                 Text="{Binding Path=Student.FirstName}"/>
 
+        <!--Last Name-->
         <TextBlock Grid.Row="3" Grid.Column="1" Text="Last Name"/>
-        <TextBox Grid.Row="3" Grid.Column="2" Width="100" Height="20"/>
+        <TextBox Grid.Row="3" Grid.Column="2" Width="100" Height="25"
+                 Text="{Binding Path=Student.LastName}"/>
 
+        <!--Grade-->
         <TextBlock Grid.Row="4" Grid.Column="1" Text="Grade"/>
-        <TextBox Grid.Row="4" Grid.Column="2" Width="100" Height="20"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Width="100" Height="25"
+                 Text="{Binding Path=Grade}"/>
         
+        <!--Class-->
         <TextBlock Grid.Row="5" Grid.Column="1" Text="Class"/>
-        <TextBox Grid.Row="5" Grid.Column="2" Width="100" Height="20"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Width="100" Height="25"
+                 Text="{Binding Path=Class}"/>
 
-        <TextBlock Grid.Row="6" Grid.Column="1" Text="Class number"/>
-        <TextBox Grid.Row="6" Grid.Column="2" Width="100" Height="20"/>
+        <!--Class number-->
+        <TextBlock Grid.Row="6" Grid.Column="1" Text="№"/>
+        <TextBox Grid.Row="6" Grid.Column="2" Width="100" Height="25"
+                 Text="{Binding Path=ClassNumber}"/>
+        
+        <!--Button-->
         <Button Grid.Row="7" Grid.Column="1" Content="Save Student"
-                Margin="0,5" FontSize="15"/>
+                Margin="0,5" FontSize="15" Command="{Binding Path= SaveCommand}"/>
 
 
-
+        <!--Teacher-->
         <Label Grid.Row="1" Grid.Column="3"
                    Margin="100, 0" FontSize="28"
                    Grid.ColumnSpan="2" Content="Teacher:"/>
+        
+        <!--First Name-->
         <TextBlock Grid.Row="2" Grid.Column="3" Text="First Name"
                    Margin="50,0,0,0"/>
-        <TextBox Grid.Row="2" Grid.Column="4" Width="100" Height="20"
-                 HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="2" Grid.Column="4" Width="100" Height="25"
+                 HorizontalAlignment="Left" Text="{Binding Path=Teacher.FirstName}"/>
 
+        <!--Last Name-->
         <TextBlock Grid.Row="3" Grid.Column="3" Text="Last Name"
                    Margin="50,0,0,0"/>
-        <TextBox Grid.Row="3" Grid.Column="4" Width="100" Height="20"
-                 HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="3" Grid.Column="4" Width="100" Height="25"
+                 HorizontalAlignment="Left" Text="{Binding Path=Teacher.LastName}"/>
 
-
+        <!--Subject-->
         <TextBlock Grid.Row="4" Grid.Column="3" Text="Subject"
                    Margin="50,0,0,0"/>
-        <TextBox Grid.Row="4" Grid.Column="4" Width="100" Height="20"
-                 HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="4" Grid.Column="4" Width="100" Height="25"
+                 HorizontalAlignment="Left" Text="{Binding Path=Subject}"/>
 
+        <!--Button-->
         <Button Grid.Row="5" Grid.Column="3" Content="Save Teacher"
                 Margin="30,5,0 ,0" Width="100" HorizontalAlignment="Center" 
                 FontSize="15"/>
         
+        <!--Account-->
         <Label Grid.Row="1" Grid.Column="5"
                    Margin="80,0,10,0" FontSize="28"
                    Grid.ColumnSpan="2" Content="Account:"/>
 
-        
-
+       
     </Grid>
 </Window>

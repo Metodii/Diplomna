@@ -56,12 +56,12 @@
         <!--First Name-->
         <TextBlock Grid.Row="2" Grid.Column="1" Text="First Name"/>
         <TextBox Grid.Row="2" Grid.Column="2" Width="100" Height="25"
-                 Text="{Binding Path=Student.FirstName}"/>
+                 Text="{Binding Path=StudentFirstName}"/>
 
         <!--Last Name-->
         <TextBlock Grid.Row="3" Grid.Column="1" Text="Last Name"/>
         <TextBox Grid.Row="3" Grid.Column="2" Width="100" Height="25"
-                 Text="{Binding Path=Student.LastName}"/>
+                 Text="{Binding Path=StudentLastName}"/>
 
         <!--Grade-->
         <TextBlock Grid.Row="4" Grid.Column="1" Text="Grade"/>
@@ -80,7 +80,7 @@
         
         <!--Button-->
         <Button Grid.Row="7" Grid.Column="1" Content="Save Student"
-                Margin="0,5" FontSize="15" Command="{Binding Path= SaveCommand}"/>
+                Margin="0,5" FontSize="15" Command="{Binding Path= SaveStudentCommand}"/>
 
 
         <!--Teacher-->
@@ -92,13 +92,13 @@
         <TextBlock Grid.Row="2" Grid.Column="3" Text="First Name"
                    Margin="50,0,0,0"/>
         <TextBox Grid.Row="2" Grid.Column="4" Width="100" Height="25"
-                 HorizontalAlignment="Left" Text="{Binding Path=Teacher.FirstName}"/>
+                 HorizontalAlignment="Left" Text="{Binding Path=TeacherFirstName}"/>
 
         <!--Last Name-->
         <TextBlock Grid.Row="3" Grid.Column="3" Text="Last Name"
                    Margin="50,0,0,0"/>
         <TextBox Grid.Row="3" Grid.Column="4" Width="100" Height="25"
-                 HorizontalAlignment="Left" Text="{Binding Path=Teacher.LastName}"/>
+                 HorizontalAlignment="Left" Text="{Binding Path=TeacherLastName}"/>
 
         <!--Subject-->
         <TextBlock Grid.Row="4" Grid.Column="3" Text="Subject"
@@ -109,7 +109,7 @@
         <!--Button-->
         <Button Grid.Row="5" Grid.Column="3" Content="Save Teacher"
                 Margin="30,5,0 ,0" Width="100" HorizontalAlignment="Center" 
-                FontSize="15"/>
+                FontSize="15" Command="{Binding Path=SaveTeacherCommand}"/>
         
         <!--Account-->
         <Label Grid.Row="1" Grid.Column="5"
